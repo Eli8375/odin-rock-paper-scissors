@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
                         return "You win! Paper beats rock.";
                 } else {
                         playerLoses();
-                        return "You lose! scissors beats paper.";
+                        return "You lose! Scissors beats paper.";
                 }
         }
         if (playerSelection.toLowerCase() === choices[2]) {
@@ -56,7 +56,7 @@ function playRound(playerSelection, computerSelection) {
                         return "You win! scissors beats paper.";
                 } else {
                         playerLoses();
-                        return "You lose! rock beats scissors.";
+                        return "You lose! Rock beats scissors.";
                 }
         }
         else {
@@ -65,16 +65,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-        let playerSelection = window.prompt("Make your choice!");
-        console.log(playRound(playerSelection, computerSelection));
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
+        for (i = 1; i < 6; i++) {
+                let playerSelection = window.prompt("Make your choice!");
+                console.log(playRound(playerSelection, computerSelection))
+                computerSelection = computerPlay();
+        }
         if (playerScore >= 3) {
                 return "You won the game!";
         } else if (computerScore >= 3) {
