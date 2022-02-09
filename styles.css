@@ -1,0 +1,55 @@
+html {
+    background-color: beige;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+}
+
+button {
+    border-radius: 100px;
+    border: 5px black solid;
+    background-color: grey;
+    color: beige;
+    padding: 20px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: darkgray
+}
+
+.counters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 50px 100px 50px;
+    padding: 15px;
+}
+
+#pScore, #cScore {
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.winner {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+}
